@@ -26,7 +26,7 @@ const Article = () => {
 
   return (
     <div>
-        <Header />
+      <Header />
       <h1>{article.title}</h1>
       <p>{article.description}</p>
       <div>{article.body}</div>

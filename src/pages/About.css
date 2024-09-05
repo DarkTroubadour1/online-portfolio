@@ -1,0 +1,10 @@
+.aboutStyle {
+    padding: 20px;
+  };
+
+  .aboutContentStyle {
+    background-color: #c42b2b;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  };

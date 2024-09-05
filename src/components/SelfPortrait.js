@@ -4,8 +4,8 @@ import me from '../assets/warm_1.jpg';
 
 function SelfPortrait() {
   return (
-    <div className="contentStyle">
-        <img id="portraitImage" src={me} />
+    <div className="portrait">
+        <img id="portraitImage" src={me} alt="" />
       </div>
   );
 }

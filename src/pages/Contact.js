@@ -3,7 +3,7 @@ import React from 'react';
 function Contact() {
   return (
     <section id="contact" style={sectionStyle}>
-      <h2 style={sectionTitle}>Contact</h2>
+      <h2 className="section-header">Contact</h2>
       <form style={formStyle}>
         <input type="text" name="name" placeholder="Your Name" style={inputStyle} required />
         <input type="email" name="email" placeholder="Your Email" style={inputStyle} required />

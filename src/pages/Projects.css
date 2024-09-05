@@ -1,21 +1,12 @@
-.sectionStyle {
+.projects-section {
     padding: 20px;
     text-align: center; /* Centers the section title */
   }
   
-  .sectionStyle > div {
+  .projects-section > div {
     display: flex;
     flex-direction: column; /* Stacks ProjectBlock elements vertically */
     justify-content: center; /* Aligns ProjectBlock elements in the vertical space */
     align-items: center; /* Centers ProjectBlock elements horizontally */
     width: 100%;
   }
-  
-  .sectionTitle {
-    font-size: 2em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    text-align: center; /* Centers the title */
-  }
-  

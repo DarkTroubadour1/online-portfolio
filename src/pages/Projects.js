@@ -7,8 +7,8 @@ function Projects() {
   const projects = importAllJsonFiles(require.context('../projects', false, /\.json$/));
   
   return (
-    <div className="sectionStyle">
-      <h2 className="sectionTitle">Projects</h2>
+    <div className="projects-section">
+      <h2 className="section-header">Projects</h2>
       <div>
         {projects.map((p, index) => (
           <ProjectBlock title={p.title} description={p.description} imgSource={p.imgSource} />
