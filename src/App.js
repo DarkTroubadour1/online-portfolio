@@ -8,8 +8,18 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-        <Route path="/" element={<MainPage />} /> {/* Main container for sections */}
-          <Route path="/article/:slug" element={<Article />} /> {/* Route to individual articles */}
+          {/* MainPage handles all the section rendering */}
+          <Route path="/" element={<MainPage />} />
+
+          {/* Article page is wrapped by MainPage, keeping Header/Nav consistent */}
+          <Route
+            path="/article/:slug"
+            element={
+              <MainPage>
+                <Article />
+              </MainPage>
+            }
+          />
         </Routes>
       </Router>
     </div>
