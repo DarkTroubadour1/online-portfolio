@@ -1,0 +1,21 @@
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    transition: max-height 0.5s ease; /* Smooth collapsing */
+    max-height: 260px; /* Set to the height of the scroll component */
+  }
+  
+  /* .horizontal-scroll.collapsed {
+    max-height: 0;
+    overflow: hidden;
+  } */
+  
+  .horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .horizontal-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }

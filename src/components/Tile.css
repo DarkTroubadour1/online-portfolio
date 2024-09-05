@@ -1,0 +1,62 @@
+.tile {
+    display: inline-block;
+    margin-right: 10px;
+    min-width: 200px;
+    min-height: 250px; /* Fixed height for the tile */
+    cursor: pointer;
+    text-align: center;
+    position: relative; /* Allows absolute positioning of child elements */
+    overflow: hidden; /* Ensures content stays within the tile bounds */
+    border-radius: 10px;
+    background-color: #333; /* Background color for the tile */
+  }
+  
+  .tile-image {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure the image stays behind the title */
+    border-radius: 10px;
+  }
+  
+  .tile-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to enhance text visibility */
+    z-index: 2; /* Ensure the title stays on top of the image */
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    padding: 10px; /* Add padding to create space around the text */
+    line-height: 1.2; /* Control the line height of the text */
+    text-align: center;
+    word-wrap: break-word; /* Ensure long words break correctly */
+  }
+  
+  .tile-title span {
+    flex: 1; /* Allow the text to stretch vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tile:hover .tile-title {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background on hover */
+    font-size: 1.3rem; /* Slightly enlarge the text on hover */
+  }
+  
+  .tile:hover .tile-image {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+  }
+  

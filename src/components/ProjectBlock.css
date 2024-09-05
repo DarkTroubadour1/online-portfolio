@@ -1,0 +1,27 @@
+.project-block-content {
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 1200px;
+  }
+  
+  .project-block-header {
+    display: flex;
+    justify-content: center; /* Centers the image and title horizontally */
+    align-items: center; /* Aligns the image and title vertically */
+    margin-bottom: 15px; /* Adds space between the header and description */
+  }
+  
+  .project-block-image {
+    width: 100px; /* Adjust the size of the image */
+    height: auto;
+    margin-right: 15px; /* Adds space between the image and the title */
+    border-radius: 5px; /* Optional: Add rounded corners to the image */
+  }
+  
+  .project-block-description {
+    text-align: left; /* If you want the description aligned left */
+  }
+  

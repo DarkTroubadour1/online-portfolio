@@ -1,0 +1,4 @@
+{
+    "title": "Render Servers Overhaul",
+    "description": "overhauling an existing render server 'farm' to utilize AWS Autoscaling Groups and updated all of the underlying hardware."
+}
