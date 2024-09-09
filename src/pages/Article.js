@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Header from '../components/Header';
 
 const Article = () => {
   const { slug } = useParams(); // This will get the slug from the URL

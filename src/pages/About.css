@@ -1,10 +1,95 @@
 .aboutStyle {
-    padding: 20px;
-  };
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all content blocks horizontally */
+}
 
-  .aboutContentStyle {
-    background-color: #c42b2b;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-  };
+.about-content {
+  background-color: #333;
+  padding: 35px;
+  margin: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+}
+
+.about-experience {
+  background-color: #333;
+  padding: 35px;
+  margin: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-experience > ul {
+  font-size: larger;
+  font-weight: 900;
+}
+
+li {
+  font-size: medium;
+  font-weight: 200;
+}
+
+.about-text {
+  margin-left: 50px;
+  color: #fff;
+}
+
+.text-container {
+  display: block;
+}
+
+.content-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Add space between the blocks */
+  justify-content: center; /* Center the blocks within the row */
+  margin-top: 1.5rem;
+}
+
+.technologies-content {
+  background-color: #333;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+}
+
+.technologies-content img {
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .about-content {
+    width: 100%;
+  }
+
+  .technologies-content {
+    width: 100%;
+  }
+
+  .about-text {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .content-group {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .technologies-content {
+    width: 100%;
+  }
+}
