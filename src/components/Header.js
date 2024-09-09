@@ -5,7 +5,7 @@ function Header() {
     <div>
     <header style={headerStyle}>
         <h1>Joel Ramsey Gross</h1>
-        <p>Senior Software Architect - Engineer | Project Manager | Mentor</p>
+        <p>Staff Software Engineer - Senior Software Architect | Project Manager | Mentor</p>
     </header>
     </div>
   );
