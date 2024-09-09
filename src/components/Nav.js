@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
-function Nav({ setActiveSection }) {
+function Nav() {
   return (
     <nav style={navStyle}>
-      <Link to="/" style={linkStyle} onClick={() => setActiveSection('about')}>about</Link>
-      <Link to="/" style={linkStyle} onClick={() => setActiveSection('projects')}>projects</Link>
-      <Link to="/" style={linkStyle} onClick={() => setActiveSection('articles')}>articles</Link>
-      <Link to="/" style={linkStyle} onClick={() => setActiveSection('contact')}>contact</Link>
+      <Link to="/" style={linkStyle}>about</Link>
+      <Link to="/projects" style={linkStyle}>projects</Link>
+      <Link to="/articles" style={linkStyle}>articles</Link>
+      <Link to="/contact" style={linkStyle}>contact</Link>
     </nav>
   );
 }
