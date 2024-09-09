@@ -6,7 +6,7 @@ import Article from './pages/Article';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           {/* MainPage handles all the section rendering */}
           <Route path="/" element={<MainPage />} />
