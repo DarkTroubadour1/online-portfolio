@@ -3,10 +3,11 @@ import React from 'react';
 function BlockchainBeyondCryptoCurrencies({ title, description, linkText, link, image }) {
   return (
     <div>
-      <p>
-        In the world of blockchain, crypto cryptocurrencies are the rockstars. They get all the hype, all the attention and sing lead vocals in the blockchain band.
+      <p>put some text here, blah, blah, blah, blah skjdfsldj skld fjlksdj flksdj flskd jfklsj fslkj fslk jfskljd fsld jfdsdkdj flskj fslkjfd lskdfj lskd fls 
+        skldjflskdjfs d;jfksjdflskjdlksjdflksjfklj fksdfkjs kl jfkls jfkls jdfkls jdkfj slkdf jskj
+        d;jfksjdflskjdlksjdflksjfklj fksdfkjs kl jfkls jfkls jdfkls jdkfj slkdf jskj d;jfksjdflskjdlksjdflksjfklj fksdfkjs kl jfkls jfkls jdfkls jdkfj slkdf jskjdfs
+        d;jfksjdflskjdlksjdflksjfklj fksdfkjs kl jfkls jfkls jdfkls jdkfj slkdf jskj
       </p>
-      <p>Let's look at the other members of the blockchain band...</p>
     </div>
   );
 }

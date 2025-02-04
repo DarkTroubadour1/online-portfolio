@@ -254,6 +254,13 @@ body {
 /* --------------------------------------------------------
    TECH JOURNALS 
 -------------------------------------------------------- */
+.center-justified {
+  text-align: justify;
+  text-align-last: center;
+  max-width: 80%;
+  margin: auto;
+}
+
 .tech-journals-section {
   padding: 2rem;
   max-width: 900px;

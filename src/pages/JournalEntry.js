@@ -19,8 +19,8 @@ function JournalEntry() {
   }
 
   return (
-    <div>
-      <h3>{journal.title}</h3>
+    <div class="center-justified">
+      <h2>{journal.title}</h2>
       <JournalEntryComponent />
     </div>
   );
