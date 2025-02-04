@@ -10,18 +10,14 @@ function Hero() {
           <span className="highlight"> Joel</span>
         </h1>
         <p>
-          Staff Software Engineer & Mentor
+          Staff Software Engineer, Mentor, & Innovator
         </p>
         <p>
-            <em>“I only pause for cappuccino and code reviews.”</em>
+            <em>"Simple, elegant solutions for sophisticated systems"</em>
         </p>
-        <button className="cta-button">Invite Me to Your Team</button>
       </div>
-      <div className="hero-image">
-        <img 
-          src="https://via.placeholder.com/400x300/EEE/333?text=Elegance+Meets+Code" 
-          alt="Hero Placeholder" 
-        />
+      <div>
+        
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import Hero from '../components/Hero';
 import ProjectList from '../components/ProjectList';
 import JournalList from '../components/JournalList';
 import project1Image from '../assets/ISpec_project.webp';
-import project2Image from '../assets/warm_1.jpg';
+import project2Image from '../assets/portfolio1.webp';
 import journalsData from '../journal/journalData';
 
 import React, { useState } from 'react';
