@@ -17,7 +17,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/online-portfolio">
       <BasePage darkMode={darkMode} setDarkMode={setDarkMode}>
         <Routes>
           <Route path="/" element={<MainPage />} />
