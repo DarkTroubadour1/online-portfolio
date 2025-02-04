@@ -6,7 +6,7 @@ function Header({ darkMode, setDarkMode }) {
       <nav className="navbar">
         <div className="logo">Joel Ramsey Gross</div>
         <ul className="nav-links">
-          <li><a href="/">Home</a></li>
+          <li><a href="/online-portfolio">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#tech-journals">Tech Journals</a></li>
         </ul>
