@@ -1,61 +1,30 @@
-import './App.css';
+// App.js
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BasePage from './pages/BasePage';
 import MainPage from './pages/MainPage';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import Article from './pages/Article';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import ArticleList from './pages/ArticleList';
+import JournalEntry from './pages/JournalEntry';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
+
   return (
-    <div className="App">
-      <Router>
+    <BrowserRouter>
+      <BasePage darkMode={darkMode} setDarkMode={setDarkMode}>
         <Routes>
-          {/* Route for each section */}
-          <Route
-            path="/"
-            element={
-              <MainPage>
-                <About />
-              </MainPage>
-            }
-          />
-          <Route
-            path="/projects"
-            element={
-              <MainPage>
-                <Projects />
-              </MainPage>
-            }
-          />
-          <Route
-            path="/articles"
-            element={
-              <MainPage>
-                <ArticleList />
-              </MainPage>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <MainPage>
-                <Contact />
-              </MainPage>
-            }
-          />
-          <Route
-            path="/article/:slug"
-            element={
-              <MainPage>
-                <Article />
-              </MainPage>
-            }
-          />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/journal/:slug" element={<JournalEntry />} />
         </Routes>
-      </Router>
-    </div>
+      </BasePage>
+    </BrowserRouter>
   );
 }
 

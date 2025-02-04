@@ -15,3 +15,327 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* --------------------------------------------------------
+   CSS VARIABLES FOR LIGHT & DARK THEMES
+-------------------------------------------------------- */
+:root {
+  /* Light Theme Colors */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #d4af37;
+  --nav-bg-color: #333333;
+  --nav-text-color: #ffffff;
+  --hero-bg-color: #fdfdfd;
+  --card-bg-color: #fefefe;
+  --card-text-color: #333333;
+  --card-border-color: #eeeeee;
+  --box-shadow-color: rgba(0, 0, 0, 0.08);
+  --footer-bg-color: #333333;
+  --footer-text-color: #ffffff;
+  --link-hover-color: #b39430;
+}
+
+a {
+  color: black;
+
+  :hover {
+    color: lightslategray;
+  }
+}
+
+body.dark-mode {
+  /* Dark Theme Overrides */
+  --bg-color: #1a1a1a;
+  --text-color: #cccccc;
+  --accent-color: #d4af37;
+  --nav-bg-color: #000000;
+  --nav-text-color: #cccccc;
+  --hero-bg-color: #1a1a1a;
+  --card-bg-color: #2a2a2a;
+  --card-text-color: #ffffff;
+  --card-border-color: #444444;
+  --box-shadow-color: rgba(255, 255, 255, 0.05);
+  --footer-bg-color: #000000;
+  --footer-text-color: #cccccc;
+  --link-hover-color: #e8c978;
+}
+
+body.dark-mode a {
+  color: white;
+}
+
+/* --------------------------------------------------------
+   RESET & FONTS 
+-------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --------------------------------------------------------
+   NAVBAR 
+-------------------------------------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-bg-color);
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .logo {
+  color: var(--nav-text-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 1.5rem;
+}
+
+.navbar .nav-links a {
+  color: var(--nav-text-color);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--nav-text-color);
+  color: var(--nav-text-color);
+  border-radius: 50%;
+  padding: 0.5rem 0.6rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  font-size: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+/* --------------------------------------------------------
+   PROJECTS SECTION 
+-------------------------------------------------------- */
+.projects-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* index.css or component-specific CSS */
+
+/* Container for each project card */
+.project-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.project-card {
+  perspective: 1000px;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  margin: 1rem;
+  padding: 1.5rem;
+  max-width: 300px;
+  box-shadow: 0 0 6px var(--box-shadow-color);
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  min-height: 20rem;
+  min-width: 20rem;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-back {
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transform: rotateY(180deg);
+  color: #333333;
+}
+
+.card-back h3 {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+}
+
+.card-back p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.card-back .btn {
+  margin-top: 10px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.card-back .btn:hover {
+  background-color: #0056b3;
+}
+*******************************************
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* --------------------------------------------------------
+   TECH JOURNALS 
+-------------------------------------------------------- */
+.tech-journals-section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tech-journals-section h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-journals-section article {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px var(--box-shadow-color);
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.tech-journals-section article h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+}
+
+.tech-journals-section article p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.read-more {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------
+   INTERACTIVE SECTION 
+-------------------------------------------------------- */
+.interactive-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.interactive-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#three-canvas {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 1rem auto;
+  display: block;
+  width: 600px;  /* fallback if inline width not recognized */
+  max-width: 90%;
+}
+
+/* --------------------------------------------------------
+   FOOTER 
+-------------------------------------------------------- */
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+footer strong {
+  color: var(--accent-color);
+}
